@@ -58,7 +58,7 @@ section {
     padding: 1.45rem;
 }
 
-.topic {
+.category {
     margin-block-end: 0.8rem;
     font-size: 0.75rem;
     letter-spacing: 0.3rem;
@@ -146,7 +146,7 @@ button:focus {
         padding: 2rem;
     }
 
-    .topic {
+    .category {
         margin-block-end: 1.2rem;
     }
 
