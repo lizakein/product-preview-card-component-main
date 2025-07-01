@@ -1,0 +1,171 @@
+:root {
+    --background-color: hsl(30, 38%, 92%);
+    --card-color: hsl(0, 0%, 100%);
+    --heading-color: hsl(212, 21%, 14%);
+    --text-color: hsl(228, 12%, 48%);
+    --accent-color: hsl(158, 36%, 37%);
+    --hover-color: hsl(158, 42%, 18%);
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fraunces-font {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.card {
+    display: flex;
+    width: 21.5rem;
+    height: auto;
+    margin: auto;  
+    flex-direction: column; 
+    overflow: hidden;
+    background-color: var(--card-color);
+    border-radius: 0.625rem;   
+}
+
+.card-img img {
+    width: 100%;
+    filter: brightness(90%) contrast(120%);
+}
+
+section {
+    padding: 1.45rem;
+}
+
+.topic {
+    margin-block-end: 0.8rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;   
+}
+
+.heading {
+    margin-block-end: 1rem;
+    font-family: "Fraunces", 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--heading-color);
+}
+
+.description {
+    margin-block-end: 1.4rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    letter-spacing: 0.1px;  
+}
+
+.price-container {
+    display: flex;
+    margin-block-end: 1rem;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.new-price {
+    font-family: "Fraunces", 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color)
+}
+
+.old-price {
+    font-size: 0.8125rem;
+}
+
+button {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;   
+    gap: 0.7rem;  
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: var(--card-color);
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.icon {
+    width: 1rem;
+}
+
+button:active,
+button:hover,
+button:focus {
+    cursor: pointer;
+    background-color: var(--hover-color);
+    transition: ease-in-out all 0.3s;
+}
+
+@media (min-width: 48rem) {
+    .card {
+        width: 37.5rem;
+        flex-direction: row;      
+    } 
+
+    .card-img {
+        width: 56%;       
+    }
+
+    .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    section {
+        width: 44%;
+        padding: 2rem;
+    }
+
+    .topic {
+        margin-block-end: 1.2rem;
+    }
+
+    .heading {
+        margin-block-end: 1.6rem;
+    }
+
+    .description {
+        margin-block-end: 1.6rem;
+    }
+
+    .price-container {
+        margin-block-end: 1.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none;
+        animation: none;
+    }
+}
